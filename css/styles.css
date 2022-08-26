@@ -299,6 +299,13 @@ span {
   background-repeat: no-repeat;
   cursor: pointer;
 }
+.footer .socials div {
+  transition: all 150ms linear;
+}
+.footer .socials div:hover {
+  padding-bottom: 0.5em;
+  border-bottom: 1.5px solid hsl(0deg, 0%, 100%);
+}
 .footer .socials .facebook {
   content: url("/images/icon-facebook.svg");
 }
@@ -312,6 +319,7 @@ span {
   content: url("/images/icon-instagram.svg");
 }
 .footer p {
+  position: relative;
   padding-top: 2em;
   padding-bottom: 3em;
   color: hsl(0deg, 0%, 55%);

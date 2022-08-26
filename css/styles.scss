@@ -352,6 +352,15 @@ span {
             cursor: pointer;
         }
 
+        div {
+            transition: all 150ms linear;
+        }
+        
+        div:hover {
+            padding-bottom: 0.5em;
+            border-bottom: 1.5px solid $color-white;
+        }
+
         .facebook {
             content: url("/images/icon-facebook.svg");
         }
@@ -370,6 +379,7 @@ span {
     }
 
     p {
+        position: relative;
         padding-top: 2em;
         padding-bottom: 3em;
         color: $color-darkGray;
