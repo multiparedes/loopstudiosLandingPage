@@ -162,6 +162,7 @@ span {
         color: $color-white;
 
         transition: all 200ms linear;
+        padding-left: 0.5em;
     }
     
     .nav-bar li a:hover {
@@ -179,14 +180,13 @@ span {
 
         cursor: pointer;
         transition: all 200ms ease-in-out;
-
     }
 }
 
 .hero-container {
     display: grid;
     place-content: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .hero-text {
@@ -214,6 +214,7 @@ span {
     .text-container {
         width: 90%;
         h3 {
+            position: relative;
             padding-bottom: 0.25em;
             text-transform: uppercase;
             font-size: 1.75em;
@@ -258,6 +259,7 @@ span {
                 left: 1em;
                 font-size: 1.5em;
                 line-height: 1em;
+                user-select: none;
 
                 transition: all 150ms linear;
 
@@ -281,7 +283,7 @@ span {
         }
     }
 
-    .see-all {
+    .see-all.bottom {
         margin-top: 2em;
     }
 }
@@ -342,7 +344,7 @@ span {
     }
 
     .socials {
-        width: 40%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
 
@@ -386,5 +388,140 @@ span {
         padding-bottom: 3em;
         color: $color-darkGray;
         font-weight: bold;
+    }
+}
+
+@media (min-width: 40em) {
+    .header {
+        background-size: cover;
+        background-image: url("/images/desktop/image-hero.jpg");
+        height: 70vh;
+    }
+
+    section {
+        padding-inline: 10%;
+    }
+
+    .nav-container {
+        align-items: center;
+
+        .nav-bar {
+            position: relative;
+            transform: translateX(0%);
+            background: none;
+            height: 100%;
+            width: 100%;
+            
+            top: 0;
+            left: 0;
+
+
+            font-size: 1em;
+            flex-flow: row;
+            justify-content: flex-end;
+        }
+        
+        .nav-menu {
+            display: none;
+        }
+    }
+    
+    .hero-container {
+        place-content: unset;
+        align-items: center;
+        margin-top: -4.5em;
+    }
+
+    .hero-text {
+        width: 40vw;
+    }
+
+    .interactive-vr {
+        position: relative;
+        display: block;
+
+        img {
+            position: relative;
+            width: 60%;
+            background-position: bottom;
+        }
+
+        .text-container {
+            width: 40%;
+            padding: 2em;
+            background-color: $color-white;
+            position: absolute;
+            bottom: 1.5em;
+            right: 10%;
+        }
+
+    }
+
+    .creations {
+        .top-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 3em;
+
+            .see-all {
+                display: block;
+            }
+        }
+
+        .grid-container {
+            grid-template-columns: repeat(4, 1fr);
+    
+            .deep-earth {
+                content: url("/images/desktop/image-deep-earth.jpg");
+            }
+            .night-arcade {
+                content: url("/images/desktop/image-night-arcade.jpg");
+            }
+            .soccer-team {
+                content: url("/images/desktop/image-soccer-team.jpg");
+            }
+            .the-grid {
+                content: url("/images/desktop/image-grid.jpg");
+            }
+            .from-above {
+                content: url("/images/desktop/image-from-above.jpg");
+            }
+            .pocket-borealis {
+                content: url("/images/desktop/image-pocket-borealis.jpg");
+            }
+            .the-curiosity {
+                content: url("/images/desktop/image-curiosity.jpg");
+            }
+            .make-it {
+                content: url("/images/desktop/image-fisheye.jpg");
+            }
+        }
+        .see-all.bottom {
+            display: none;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .left {
+            .nav-bar.footer {
+                display: flex;
+                flex-flow: row;
+                gap: 2em;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -1em;
+        }
     }
 }
