@@ -149,6 +149,8 @@ span {
 
         transition: all 200ms linear;
         transform: translateX(100%);
+
+        z-index: 5;
     }
 
     .nav-bar[data-visible="true"] {

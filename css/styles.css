@@ -135,6 +135,7 @@ span {
   font-size: 1.5em;
   transition: all 200ms linear;
   transform: translateX(100%);
+  z-index: 5;
 }
 .nav-container .nav-bar[data-visible=true] {
   transform: translateX(0%);
